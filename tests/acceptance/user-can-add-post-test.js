@@ -15,9 +15,9 @@ module('Acceptance | user can add post', {
 });
 
 test('visiting /user-can-add-post', function(assert) {
-  visit('/user-can-add-post');
+  visit('/posts');
 
   andThen(function() {
-    assert.equal(currentURL(), '/user-can-add-post');
+    assert.equal(currentURL(), '/posts');
   });
 });

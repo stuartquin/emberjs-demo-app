@@ -13,9 +13,9 @@ test('it renders', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{blog-post}}`);
+  assert.equal(this.$().text().trim(), 'Like ()');
 
-  assert.equal(this.$().text(), '');
-
+  this.set("isShowingBody", true);
   // Template block usage:
   this.render(hbs`
     {{#blog-post}}
@@ -23,5 +23,5 @@ test('it renders', function(assert) {
     {{/blog-post}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Like ()');
 });
