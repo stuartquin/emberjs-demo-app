@@ -4,4 +4,4 @@ dependencies:
         - npm install -g testem
 test:
     override:
-        - testem
+        - testem ci
