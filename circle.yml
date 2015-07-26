@@ -1,6 +1,7 @@
 dependencies:
     post:
         - bower install
+        - npm install -g testem
 test:
     override:
-        - ember test --server
+        - testem
