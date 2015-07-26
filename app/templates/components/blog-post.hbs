@@ -1,0 +1,7 @@
+<article class="blog-post">
+  <h3 {{action "toggleBody"}}>{{title}}</h3>
+  {{like-button action="like" count=likes}}
+  {{#if isShowingBody}}
+  <p>{{yield}}</p>
+  {{/if}}
+</article>

@@ -1,0 +1,18 @@
+{{outlet}}
+
+<p>
+  {{input type="text" value=newTitle size="50"}}
+</p>
+<p>
+  {{textarea value=newContent}}
+</p>
+
+{{action-button action="addPost"}}
+
+<div>
+  {{#each model.posts as |post|}}
+    {{#blog-post title=post.title likes=post.likes}}
+      {{post.content}}
+    {{/blog-post}}
+  {{/each}}
+</div>
